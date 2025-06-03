@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]          # pip uses this to bootstrap the build
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sub-modules"                            # the published/wheel name
+version = "0.1.0"
+description = "A Handy utility for bucket operations"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+# Run-time deps for *anyone* who installs the wheel
+dependencies = ["google-cloud-storage>=2.14.0", "azure-storage-blob>=12.24.0", "cryptography>=44.0.0"]
+
+[project.authors]
+authors = [
+    { name = "Abdul Majid", email = "abdul.majid.ml@strikeready.com" }
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
