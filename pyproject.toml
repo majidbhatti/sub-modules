@@ -13,7 +13,6 @@ license = { text = "MIT" }
 # Run-time deps for *anyone* who installs the wheel
 dependencies = ["google-cloud-storage>=2.14.0", "azure-storage-blob>=12.24.0", "cryptography>=44.0.0"]
 
-[project.authors]
 authors = [
     { name = "Abdul Majid", email = "abdul.majid.ml@strikeready.com" }
 ]
